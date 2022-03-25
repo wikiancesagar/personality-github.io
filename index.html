@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Enter your name I say about your personality</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label>Enter Your name</label><br>
+                <input type="text" name="" id="nameid">
+            </div>
+
+            <div class="imgdiv">
+                <img src="sagar-creation.jpg" width="200" height="200" class="imgchange">
+            </div>
+            <button> Click Me </button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name = $('#nameid').val();
+            //alert(name);
+            $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+            const b = $('.imgchange');
+            console.log(b);
+        });
+    });
+</script>
+</body>
+</html>
